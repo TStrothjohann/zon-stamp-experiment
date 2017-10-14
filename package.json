@@ -1,0 +1,27 @@
+{
+  "name": "zon-stamp",
+  "version": "1.0.0",
+  "description": "stamped cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tstrothjohann/zon-stamp.git"
+  },
+  "keywords": [
+    "stamp",
+    "amp",
+    "cardstack"
+  ],
+  "author": "Thomas Strothjohann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tstrothjohann/zon-stamp/issues"
+  },
+  "homepage": "https://github.com/tstrothjohann/zon-stamp#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

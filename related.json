@@ -1,0 +1,14 @@
+{
+  "Lesen Sie jetzt": [
+    {
+      "title": "My friends, this is India [...]",
+      "url": "http://a-publisher.com/india",
+      "image": "./img/bg1.jpg"
+    },
+    {
+      "title": "A wonderful weekend with Tenturi",
+      "url": "http://a-publisher.com/tenturi",
+      "image": "./img/bg2.jpg"
+    }
+  ],
+}
