@@ -10,12 +10,15 @@ describe("Server", function() {
       });
     });
 
-    it("returns hello world", function(done) {
+    it("serves an AMP", function(done) {
       request.get(base_url, function(error, response, body) {
-        expect(body).toContain("Hello World");
+        expect(body).toContain("⚡");
         done();
       });
     });
 
   });
 });
+
+// It can get a cardstack from cardstack api 
+// It can render parts of cardstack object into
