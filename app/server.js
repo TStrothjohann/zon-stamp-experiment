@@ -3,6 +3,9 @@ var express = require('express');
 var app = express();
 var Cardstack = require("./models/Cardstack.js");
 
+// Controllers
+var cardstack_controller = require('./controllers/stackController.js');
+
 // Server Config
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -11,9 +14,20 @@ app.get("/", function(req, res) {
   res.render("index", {title: "Hello STAMP!"});
 });
 
-app.get("/stack", function(req, res) {
-  var stack = new Cardstack(res);
+app.get("/stacks/:stackId", function(req, res) {
+  var callback = function(data){
+    res.send(data);
+  }
+  var stack = new Cardstack(req.params.stackId, callback);
 });
+
+
+
+/// Stack ROUTES ///
+
+/* GET cards list. */
+app.get('/stamps/:stackId', cardstack_controller.cards_list);
+
 
 app.listen(3000);
 console.log("listening on 3000");

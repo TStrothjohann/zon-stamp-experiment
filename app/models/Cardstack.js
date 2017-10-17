@@ -1,11 +1,12 @@
 var request = require("request");
 var token = process.env.CARDS_TOKEN;
-var dataurl = "http://card-builder.lovely-cdn.com/api/v1/organisations/1/stacks/652?token=" + token;
 
-function Cardstack(callback){
+
+function Cardstack(id, callback){
   this.error = false;
   this.data = '';
 
+  var dataurl = "http://card-builder.lovely-cdn.com/api/v1/organisations/1/stacks/" + id + "?token=" + token;
   var self = this;
 
   request
