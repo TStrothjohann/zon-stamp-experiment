@@ -1,3 +1,4 @@
+require('dotenv').config();
 var request = require("request");
 var Cardstack = require("../app/models/Cardstack.js");
 var base_url = "http://localhost:3000/";
@@ -23,18 +24,16 @@ describe("Server", function() {
 
 
 describe("Cardstack", function() {
-  var testCardstack;
-
-  beforeEach(function() {
-    testCardstack = new Cardstack;
-  });
   
-  it("has a title", function(done){
-    expect(testCardstack.cardstackContent).toBeDefined();
-    done();
+  it("gets a stack from cardstack API", function(done){
+    var callback = function(data){
+      expect(data.data.name).toBe("Sonnenfinsternis USA 2017");
+      done();
+    };
+    
+    testCardstack = new Cardstack(callback);
   });
 });
 
 
-// It can get a cardstack from cardstack api 
 // It can render parts of cardstack object into
