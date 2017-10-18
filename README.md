@@ -1,7 +1,7 @@
-#Description
+# ZON Cards go STAMP
 This is a proof of concept. A node.js app that gets card stack data by id from the [cards backend](https://github.com/edenspiekermann/espi-card-builder) and renders the information in a very basic STAMP template.
 
-#Setup
+## Setup
 
 ```
 git clone https://github.com/TStrothjohann/zon-stamp-experiment
@@ -9,20 +9,20 @@ cd zon-stamp-experiment
 npm install
 ```
 
-#Config
+## Config
 Add an .env file to the root and add the API token:
 
 ```
 CARDS_TOKEN=YOUR_TOKEN
 ```
 
-#Start
+## Start
 `npm start` starts the app
 
-#Tests
+## Tests
 Run the Jasmine tests with `npm test`
 
-#Routes
+## Routes
 
 `GET /stacks/:stackId` renders a stacks JSON
 
