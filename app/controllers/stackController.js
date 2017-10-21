@@ -5,7 +5,7 @@ var RelatedStacks = require("../models/Related.js")
 exports.cards_list = function(req, res) {
     
   var callback = function(stack){
-    res.render('stamp', { stack: stack.data });
+    res.render('stamp', { stack: stack.data, id: req.params.stackId });
   }
   var stack = new Cardstack(req.params.stackId, callback);
 };
@@ -13,6 +13,7 @@ exports.cards_list = function(req, res) {
 
 exports.relatedStacks = function(req, res) {
   res.setHeader("content-type", "application/json");
+  res.setHeader("AMP-Access-Control-Allow-Source-Origin", req.params.__amp_source_origin );
   
   var relatedsCallback = function(relateds){
     res.json(relateds)
