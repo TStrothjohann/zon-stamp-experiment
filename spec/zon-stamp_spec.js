@@ -28,6 +28,14 @@ describe("Server", function() {
       })
     })
 
+    it("serves a JSON related stacks list on /related route", function(done){
+      request.get(base_url + "stamps" + "/652/related", function(error, response, body){
+        expect(response.headers['content-type']).toContain("application/json");
+        expect( JSON.parse(body)['Lesen Sie jetzt'] ).toBeDefined();
+        done();
+      })
+    })
+
   });
 });
 

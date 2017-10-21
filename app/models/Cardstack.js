@@ -21,7 +21,7 @@ function Cardstack(id, callback){
       try{
         callback( JSON.parse( self.data.toString() ) );
       }catch(err){
-        console.log("error when parsing fresh cardstack data", self.data);
+        console.log("error when parsing fresh cardstack data", err);
         self.error = true;
       }
     })

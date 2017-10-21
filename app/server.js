@@ -28,6 +28,7 @@ app.get("/stacks/:stackId", function(req, res) {
 /* GET cards list. */
 app.get('/stamps/:stackId', cardstack_controller.cards_list);
 
+app.get('/stamps/:stackId/related', cardstack_controller.relatedStacks);
 
 app.listen(3000);
 console.log("listening on 3000");

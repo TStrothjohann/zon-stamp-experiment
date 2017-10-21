@@ -27,3 +27,5 @@ Run the Jasmine tests with `npm test`
 `GET /stacks/:stackId` renders a stacks JSON
 
 `GET /stamps/:stackId` renders a STAMP featuring information from the stack with given ID.
+
+For example run `npm start` and open http://localhost:3000/stamps/652
