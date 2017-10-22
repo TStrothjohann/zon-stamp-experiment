@@ -1,9 +1,11 @@
 <amp-story-page id="<%= id %>">
+  <% if(card.image.data.file.url){ %>
   <amp-story-grid-layer template="fill">
-    <amp-img src=""
+    <amp-img src="<%= card.image.data.file.url %>"
         width="900" height="1600">
     </amp-img>
   </amp-story-grid-layer>
+  <% } %>
   <amp-story-grid-layer template="vertical">
     <h1><%= card.headline %></h1>
   </amp-story-grid-layer>

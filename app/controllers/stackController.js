@@ -13,7 +13,7 @@ exports.cards_list = function(req, res) {
 
 exports.relatedStacks = function(req, res) {
   res.setHeader("content-type", "application/json");
-  res.setHeader("AMP-Access-Control-Allow-Source-Origin", req.params.__amp_source_origin );
+  res.setHeader("AMP-Access-Control-Allow-Source-Origin", req.query.__amp_source_origin || '*');
   
   var relatedsCallback = function(relateds){
     res.json(relateds)
