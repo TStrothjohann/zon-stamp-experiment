@@ -5,8 +5,15 @@
         width="900" height="1600">
     </amp-img>
   </amp-story-grid-layer>
+  <amp-story-grid-layer template="fill">
+    <div class="card-overlay"></div>
+  </amp-story-grid-layer>
   <% } %>
-  <amp-story-grid-layer template="vertical">
-    <h1><%= card.headline %></h1>
+  <amp-story-grid-layer template="thirds">
+    <div grid-area="upper-third" class="image-overlay center-text">
+      <p class="quote__name"><%= card.attribution %></p>
+      <p class="quote__label"><%= card.attributionDescription %></p>
+      <h2 class="card-heading font-xxl"><%= card.quote %></h2>
+    </div>
   </amp-story-grid-layer>
 </amp-story-page>

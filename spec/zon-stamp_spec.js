@@ -2,6 +2,8 @@ require('dotenv').config();
 var request = require("request");
 var Cardstack = require("../app/models/Cardstack.js");
 var base_url = "http://localhost:3000/";
+var testStack = require("./test-data/test-stack.js");
+var helpers = require("../app/helpers/giphy-url.js");
 
 describe("Server", function() {
   describe("GET /", function() {
@@ -50,6 +52,14 @@ describe("Cardstack Model", function() {
     
     testCardstack = new Cardstack("652", callback);
   });
+
+  it("can transform a giphy url to webp url", function(){
+    var stack = new testStack;
+    stack.data.data.cards[21].data.mediaUrl = helpers.prepareGiphyUrls(stack.data.data.cards[21].data.mediaUrl);
+    expect(stack.data.data.cards[21].data.mediaUrl).toBe(
+      "https://media.giphy.com/media/xTeWOUiAn4Y1ujJhmw/giphy.webp"
+    );
+  })
 
 });
 

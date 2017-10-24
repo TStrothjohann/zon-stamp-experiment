@@ -29,3 +29,9 @@ Run the Jasmine tests with `npm test`
 `GET /stamps/:stackId` renders a STAMP featuring information from the stack with given ID.
 
 For example run `npm start` and open http://localhost:3000/stamps/652
+
+
+## Info
+* A [cardstack on ZON](http://www.zeit.de/wissen/2017-08/sonnenfinsternis-total-eclipse-usa)
+* The same cardstack in [this app's stack API view](http://localhost:3000/stacks/652)
+* The [same stack as STAMP](http://localhost:3000/stamps/652)
