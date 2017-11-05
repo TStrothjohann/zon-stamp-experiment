@@ -1,14 +1,17 @@
 <amp-story-page id="<%= id %>">
-  <amp-story-grid-layer template="fill">
-    <!-- TODO: giphy links have to be transformed to either of these -->
-    <!-- https://media.giphy.com/media/xnJ3p5nvRPLSo/giphy.webp -->
-    <!-- https://media.giphy.com/media/xnJ3p5nvRPLSo/giphy.mp4 -->
-    <!-- https://media.giphy.com/media/xnJ3p5nvRPLSo/giphy.gif -->
-    <amp-anim width="900"
-      height="1600"
-      src="<%= card.mediaUrl %>/giphy.gif"
+  <amp-story-grid-layer template="vertical" class="<%= card.theme %>">
+    <% if(card.gif){ %>
+    <amp-anim width="<%= card.gif.width %>"
+      height="<%= card.gif.height %>"
+      src="<%= card.gif.mediaUrl %>"
       alt="<%= card.description %>"
       attribution="<%= card.attribution %>">
     </amp-anim>
+    <% } %>
+    <div>
+      <h2><%= card.headline %></h2>
+      <p><%= card.description %></p>
+    </div>
   </amp-story-grid-layer>
+
 </amp-story-page>
