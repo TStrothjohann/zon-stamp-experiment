@@ -92,7 +92,18 @@ describe("Cardstack Model", function() {
 
   })
 
-  it("handles a youtube link", function(){
+  it("handles a youtube link", function(done){
+    var stack = new testStack;
+
+    helpers.mediaCardUrls(
+      {
+        "cardNumber": 22,
+        "mediaUrl": stack.data.data.cards[22].data.mediaUrl
+      }
+    ).then(function(data){
+      expect(data.youtube.id).toBe("lcOxhH8N3Bo");
+      done();
+    })
 
   })
 
