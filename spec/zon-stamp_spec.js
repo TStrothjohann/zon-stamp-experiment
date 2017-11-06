@@ -55,14 +55,14 @@ describe("Cardstack Model", function() {
 
   it("can transform a giphy url to giphy object with width/height/url", function(done){
     var stack = new testStack;
-    var callback = function(gObject){
-      expect(gObject.mediaUrl).toEqual("https://media.giphy.com/media/xTeWOUiAn4Y1ujJhmw/giphy.gif");
-      expect(gObject.width).toEqual(480);
-      expect(gObject.height).toEqual(293);
+    var callback = function(media){
+      expect(media.gif.mediaUrl).toEqual("https://media.giphy.com/media/xTeWOUiAn4Y1ujJhmw/giphy.gif");
+      expect(media.gif.width).toEqual(480);
+      expect(media.gif.height).toEqual(293);
       done();      
     }
 
-    stack.data.data.cards[21].data.giphyObject = helpers.prepareGiphyUrls(
+    stack.data.data.cards[21].data.giphyObject = helpers.mediaCardUrls(
       {
         "cardNumber": 21,
         "mediaUrl": stack.data.data.cards[21].data.mediaUrl
@@ -74,14 +74,14 @@ describe("Cardstack Model", function() {
 
   it("transforms a .gif url to gif-object with url/width/height", function(done){
     var stack = new testStack;
-    var callback = function(gObject){
-      expect(gObject.mediaUrl).toEqual("https://img.buzzfeed.com/buzzfeed-static/static/2017-08/2/19/asset/buzzfeed-prod-fastlane-01/anigif_sub-buzz-32171-1501715090-1.gif");
-      expect(gObject.width).toEqual(320);
-      expect(gObject.height).toEqual(180);
+    var callback = function(media){
+      expect(media.gif.mediaUrl).toEqual("https://img.buzzfeed.com/buzzfeed-static/static/2017-08/2/19/asset/buzzfeed-prod-fastlane-01/anigif_sub-buzz-32171-1501715090-1.gif");
+      expect(media.gif.width).toEqual(320);
+      expect(media.gif.height).toEqual(180);
       done();      
     }
 
-    stack.data.data.cards[12].data.giphyObject = helpers.prepareGiphyUrls(
+    stack.data.data.cards[12].data.giphyObject = helpers.mediaCardUrls(
       {
         "cardNumber": 12,
         "mediaUrl": stack.data.data.cards[12].data.mediaUrl
@@ -89,6 +89,10 @@ describe("Cardstack Model", function() {
     ).then(function(data){
       callback(data)
     });
+
+  })
+
+  it("handles a youtube link", function(){
 
   })
 

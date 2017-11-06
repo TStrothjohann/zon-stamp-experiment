@@ -1,13 +1,27 @@
 <amp-story-page id="<%= id %>">
   <amp-story-grid-layer template="vertical" class="<%= card.theme %>">
-    <% if(card.gif){ %>
-    <amp-anim width="<%= card.gif.width %>"
-      height="<%= card.gif.height %>"
-      src="<%= card.gif.mediaUrl %>"
+    
+    <!-- GIF -->
+    <% if(card.media.gif){ %>
+    <amp-anim 
+      width="<%= card.media.gif.width %>"
+      height="<%= card.media.gif.height %>"
+      layout="responsive"
+      src="<%= card.media.gif.mediaUrl %>"
       alt="<%= card.description %>"
       attribution="<%= card.attribution %>">
     </amp-anim>
     <% } %>
+
+    <!-- YouTube -->
+    <% if(card.media.youtube){ %>
+    <amp-youtube
+      data-videoid="<%= card.media.youtube.id %>"
+      layout="responsive"
+      width="480" height="270"> 
+    </amp-youtube>
+    <% } %>
+
     <div>
       <h2><%= card.headline %></h2>
       <p><%= card.description %></p>

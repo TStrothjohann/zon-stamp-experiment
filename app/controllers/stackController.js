@@ -11,7 +11,7 @@ exports.cards_list = function(req, res) {
   var renderCallback = function(stack, mediaCards){
     
     //Transform all giphy URLs to valid .gif URLs and add size information
-    var actions = mediaCards.map(helpers.prepareGiphyUrls);
+    var actions = mediaCards.map(helpers.mediaCardUrls);
     
     //Wait for all the URLs to be transformed
     var results = Promise.all(actions);
@@ -19,7 +19,7 @@ exports.cards_list = function(req, res) {
     //add additional information to stack data and render stack
     results.then(function(){
       for (var i = mediaCards.length - 1; i >= 0; i--) {
-        stack.data.cards[mediaCards[i].cardNumber].data.gif = mediaCards[i];
+        stack.data.cards[mediaCards[i].cardNumber].data.media = mediaCards[i];
       }
 
       res.render('stamp', { stack: stack.data, id: req.params.stackId, server: stampServerURL });
