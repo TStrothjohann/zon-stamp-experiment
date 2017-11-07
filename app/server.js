@@ -2,7 +2,7 @@ require('dotenv').config();
 var express = require('express');
 var app = express();
 var Cardstack = require("./models/Cardstack.js");
-
+var thePort = process.env.PORT || 3000;
 // Controllers
 var cardstack_controller = require('./controllers/stackController.js');
 
@@ -30,5 +30,5 @@ app.get('/stamps/:stackId', cardstack_controller.cards_list);
 
 app.get('/stamps/:stackId/related', cardstack_controller.relatedStacks);
 
-app.listen(3000);
-console.log("listening on 3000");
+app.listen(thePort);
+console.log("listening on ", thePort);
