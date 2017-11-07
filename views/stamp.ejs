@@ -68,7 +68,7 @@
     </style>
   </head>
   <body>
-    <amp-story standalone bookend-config-src="http://localhost:3000/stamps/<%- id %>/related">
+    <amp-story standalone bookend-config-src="<%= server %>/stamps/<%- id %>/related">
       <% stack.cards.forEach(function(card){ %>
         <% var view = 'cards/' + card.cms.type %>
         <%- include(view, {card: card.data, id: card.cms.id}); %>
