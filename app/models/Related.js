@@ -9,7 +9,7 @@ function Relateds(relateds, callback){
   for (var i = relateds.length - 1; i >= 0; i--) {
     var template = {};
     template.title = relateds[i].data.name
-    template.url = stampServerURL + "/stamp/" + relateds[i].cms.id
+    template.url = stampServerURL + "/stamps/" + relateds[i].cms.id
     template.image = relateds[i].data.image.data.file.url
     self.data['Lesen Sie jetzt'].push(template);
   }
