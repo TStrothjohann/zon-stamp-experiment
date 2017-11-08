@@ -43,4 +43,14 @@ You can checkout the prototype on Heroku - here are some stacks. You need to ena
 https://zon-stamp.herokuapp.com/stamps/652 (Total Eclipse in USA)
 https://zon-stamp.herokuapp.com/stamps/656 (Electoral system in Germany)
 https://zon-stamp.herokuapp.com/stamps/650 (Partial Lunar Eclipses)
+https://zon-stamp.herokuapp.com/stamps/633 (1968 student's revolution in Germany)
+
+
+##ToDo
+* Styling: White text on bright background images
+* Background color themes from card stacks
+* https font paths
+* integration: split card
+* integration: choice card
+* integration: new gif and html cards
 
