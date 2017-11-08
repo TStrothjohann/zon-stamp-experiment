@@ -35,3 +35,12 @@ For example run `npm start` and open http://localhost:3000/stamps/652
 * A [cardstack on ZON](http://www.zeit.de/wissen/2017-08/sonnenfinsternis-total-eclipse-usa)
 * The same cardstack in [this app's stack API view](http://localhost:3000/stacks/652)
 * The [same stack as STAMP](http://localhost:3000/stamps/652)
+
+
+## Prototype on Heroku
+You can checkout the prototype on Heroku - here are some stacks. You need to enable the experimental `amp-story` Feature via Console though, which makes it a bit tidious to get it running on mobile.
+
+https://zon-stamp.herokuapp.com/stamps/652 (Total Eclipse in USA)
+https://zon-stamp.herokuapp.com/stamps/656 (Electoral system in Germany)
+https://zon-stamp.herokuapp.com/stamps/650 (Partial Lunar Eclipses)
+
