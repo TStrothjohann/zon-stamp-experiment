@@ -44,6 +44,8 @@ https://zon-stamp.herokuapp.com/stamps/652 (Total Eclipse in USA)
 https://zon-stamp.herokuapp.com/stamps/656 (Electoral system in Germany)
 https://zon-stamp.herokuapp.com/stamps/650 (Partial Lunar Eclipses)
 https://zon-stamp.herokuapp.com/stamps/633 (1968 student's revolution in Germany)
+https://zon-stamp.herokuapp.com/stamps/631 (Global Drug Survey)
+https://zon-stamp.herokuapp.com/stamps/651 (AfD and Putin)
 
 
 ##ToDo
