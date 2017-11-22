@@ -40,18 +40,23 @@ For example run `npm start` and open http://localhost:3000/stamps/652
 ## Prototype on Heroku
 You can checkout the prototype on Heroku - here are some stacks. You need to enable the experimental `amp-story` Feature via Console though, which makes it a bit tidious to get it running on mobile.
 
-https://zon-stamp.herokuapp.com/stamps/652 (Total Eclipse in USA)
-https://zon-stamp.herokuapp.com/stamps/656 (Electoral system in Germany)
-https://zon-stamp.herokuapp.com/stamps/650 (Partial Lunar Eclipses)
-https://zon-stamp.herokuapp.com/stamps/633 (1968 student's revolution in Germany)
-https://zon-stamp.herokuapp.com/stamps/631 (Global Drug Survey)
-https://zon-stamp.herokuapp.com/stamps/651 (AfD and Putin)
+* https://zon-stamp.herokuapp.com/stamps/652 (Total Eclipse in USA)
+* https://zon-stamp.herokuapp.com/stamps/656 (Electoral system in Germany)
+* https://zon-stamp.herokuapp.com/stamps/650 (Partial Lunar Eclipses)
+* https://zon-stamp.herokuapp.com/stamps/633 (1968 student's revolution in Germany)
+* https://zon-stamp.herokuapp.com/stamps/631 (Global Drug Survey)
+* https://zon-stamp.herokuapp.com/stamps/651 (AfD and Putin)
+* https://zon-stamp.herokuapp.com/stamps/86 (GIF story about the aledged bought World Cup 2006 in Germany)
 
+Four arabic examples:
+* https://zon-stamp.herokuapp.com/stamps/70  (Asylum procedures, Arabic)
+* https://zon-stamp.herokuapp.com/stamps/69  (Public transportation, Arabic)
+* https://zon-stamp.herokuapp.com/stamps/67  (Medical help, Arabic)
 
 ##ToDo
 * Styling: White text on bright background images
+* Image handling (right now it just loads the full resolution images which can be really big. But they are hosted on cloudinary which includes cropping and resize features)
 * Background color themes from card stacks
-* https font paths
 * integration: split card
 * integration: choice card
 * integration: new gif and html cards
